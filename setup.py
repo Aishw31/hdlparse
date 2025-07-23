@@ -1,5 +1,5 @@
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # Use README.rst for the long description
 with open('README.rst') as fh:
