@@ -29,7 +29,7 @@ setup(name='hdlparse',
     long_description=long_description,
     platforms = ['Any'],
     install_requires = [],
-    packages = ['hdlparse'],
+    packages = find_packages(),
     py_modules = [],
     include_package_data = True,
     
