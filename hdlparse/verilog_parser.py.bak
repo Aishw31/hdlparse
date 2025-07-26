@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright © 2017 Kevin Thibedeau
 # Distributed under the terms of the MIT license
-
+from __future__ import print_function
 
 import re, os, io, ast, pprint, collections
 from .minilexer import MiniLexer
@@ -198,7 +198,7 @@ def parse_verilog(text):
       for i in param_items:
         ports[i] = VerilogParameter(i, mode, ptype)
 
-      vobj = VerilogModule(name, list(ports.values()), generics, dict(sections), metacomments)
+      vobj = VerilogModule(name, ports.values(), generics, dict(sections), metacomments)
       objects.append(vobj)
       last_item = None
       metacomments = []

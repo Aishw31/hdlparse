@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright © 2017 Kevin Thibedeau
 # Distributed under the terms of the MIT license
-
+from __future__ import print_function
 
 import re
 
@@ -22,7 +22,7 @@ class MiniLexer(object):
     self.tokens = {}
 
     # Pre-process the state definitions
-    for state, patterns in tokens.items():
+    for state, patterns in tokens.iteritems():
       full_patterns = []
       for p in patterns:
         pat = re.compile(p[0], flags)
